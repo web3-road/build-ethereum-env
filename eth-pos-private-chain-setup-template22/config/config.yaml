@@ -1,0 +1,32 @@
+general:
+  network_name: "Ethereum PoS Private Chain"
+  chain_id: 12345
+  consensus: "PoS"
+  data_directory: "./data"
+  log_level: "info"
+
+geth:
+  rpc:
+    enabled: true
+    address: "127.0.0.1"
+    port: 8545
+  ws:
+    enabled: true
+    port: 8546
+  sync_mode: "full"
+
+prysm:
+  beacon_chain:
+    config_file: "./prysm/beacon-chain-config.yaml"
+  validator:
+    config_file: "./prysm/validator-config.yaml"
+
+lighthouse:
+  beacon_node:
+    config_file: "./lighthouse/beacon-node-config.toml"
+  validator:
+    config_file: "./lighthouse/validator-config.toml"
+
+genesis:
+  deposit_data_file: "./genesis/deposit_data.json"
+  genesis_file: "./genesis/genesis.ssz"

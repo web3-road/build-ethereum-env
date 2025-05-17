@@ -1,0 +1,18 @@
+{
+  "deposits": [
+    {
+      "pubkey": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+      "withdrawal_credentials": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+      "amount": "32000000000",
+      "signature": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+      "index": 0
+    },
+    {
+      "pubkey": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+      "withdrawal_credentials": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+      "amount": "32000000000",
+      "signature": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+      "index": 1
+    }
+  ]
+}

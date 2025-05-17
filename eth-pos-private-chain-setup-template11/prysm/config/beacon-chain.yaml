@@ -1,0 +1,33 @@
+network:
+  name: "my-private-chain"
+  chain_id: 12345
+  bootnodes:
+    - "enr:-MY_NODE_ENR_HERE"
+  min_peers: 1
+  max_peers: 25
+
+beacon_rpc:
+  enabled: true
+  addr: "0.0.0.0:4000"
+  cors: ["*"]
+
+p2p:
+  max_peers: 25
+  gossip:
+    enabled: true
+
+data_dir: "/path/to/data"
+
+logging:
+  level: "info"
+  file: "beacon-chain.log"
+
+metrics:
+  enabled: true
+  addr: "0.0.0.0:8080"
+
+execution_client:
+  url: "http://localhost:8545"
+  auth: "basic"  # or "bearer" depending on your setup
+
+# Additional settings can be added as needed.

@@ -1,0 +1,22 @@
+execution:
+  # Custom configuration settings for the execution layer
+  network:
+    name: "Ethereum PoS Private Chain"
+    chain_id: 12345
+    gas_limit: 8000000
+    block_time: 12
+  rpc:
+    enabled: true
+    host: "127.0.0.1"
+    port: 8545
+  logging:
+    level: "info"
+    file: "execution.log"
+  consensus:
+    engine: "ethash"
+    mining:
+      enabled: true
+      miner_address: "0xYourMinerAddressHere"
+  database:
+    type: "leveldb"
+    path: "./data"

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# This script generates the genesis block for the Lighthouse client.
+
+set -e
+
+# Define the output file for the genesis block
+OUTPUT_FILE="../genesis/genesis.ssz"
+
+# Check if the necessary files exist
+if [ ! -f "../deposit_contract/DepositContract.sol" ]; then
+    echo "Deposit contract not found!"
+    exit 1
+fi
+
+if [ ! -f "../genesis/genesis.json" ]; then
+    echo "Genesis configuration file not found!"
+    exit 1
+fi
+
+# Generate the genesis block using Lighthouse's tools
+lighthouse genesis new --config ../genesis/genesis.json --deposit-contract ../deposit_contract/DepositContract.sol --output $OUTPUT_FILE
+
+echo "Genesis block generated successfully at $OUTPUT_FILE"

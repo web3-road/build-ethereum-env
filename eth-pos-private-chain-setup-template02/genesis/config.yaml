@@ -1,0 +1,20 @@
+network:
+  name: "Ethereum PoS Private Chain"
+  chain_id: 12345
+  genesis_time: "2023-12-15T00:00:00Z"
+  deposit_contract_address: "0xYourDepositContractAddress"
+  validator_count: 4
+  initial_balance: 32000000000000000000  # 32 ETH in wei
+  bootnodes:
+    - "enr:-YOUR_BOOTNODE_ENR_HERE"
+  rpc:
+    enabled: true
+    address: "127.0.0.1"
+    port: 8545
+  metrics:
+    enabled: true
+    address: "127.0.0.1"
+    port: 8000
+  logging:
+    level: "info"
+    file: "logs/chain.log"

@@ -1,0 +1,25 @@
+beacon_chain:
+  data_dir: "/path/to/beacon/data"
+  chain_id: "your_chain_id"
+  min_peers: 2
+  max_peers: 50
+  bootstrap_nodes:
+    - "enr:-your_bootstrap_node_1"
+    - "enr:-your_bootstrap_node_2"
+  eth1:
+    endpoint: "http://localhost:8545"
+    deposit_contract_address: "your_deposit_contract_address"
+  p2p:
+    port: 9000
+    discovery_port: 9001
+  logging:
+    level: "info"
+    file: "beacon.log"
+  metrics:
+    enabled: true
+    port: 8080
+  execution_layer:
+    endpoint: "http://localhost:8551"
+    auth:
+      username: "your_username"
+      password: "your_password"

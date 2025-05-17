@@ -1,0 +1,31 @@
+validator:
+  # The validator's Ethereum address
+  address: "0xYourValidatorAddressHere"
+
+  # The path to the validator's keystore file
+  keystore_path: "/path/to/your/keystore/file"
+
+  # The password for the keystore file
+  password: "your_keystore_password"
+
+  # The amount of ETH to deposit for the validator
+  deposit_amount: 32
+
+  # The path to the deposit contract
+  deposit_contract: "/path/to/deposit_contract.txt"
+
+  # The network to connect to
+  network:
+    # The beacon chain endpoint
+    beacon_chain_endpoint: "http://localhost:4000"
+
+    # The execution layer endpoint
+    execution_layer_endpoint: "http://localhost:8545"
+
+  # Additional settings
+  settings:
+    # Enable or disable the validator
+    enabled: true
+
+    # Log level for the validator
+    log_level: "info"

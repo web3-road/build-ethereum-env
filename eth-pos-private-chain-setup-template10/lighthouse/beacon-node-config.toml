@@ -1,0 +1,35 @@
+# This file contains the configuration settings for the Lighthouse beacon node.
+
+network = "mainnet"
+data_dir = "/path/to/lighthouse/data"
+http_port = 5052
+grpc_port = 5054
+metrics_port = 5054
+
+# Specify the beacon chain configuration
+beacon_chain = { 
+    "bootstrap_nodes": [
+        "enr:-J4Q...@127.0.0.1:9000"
+    ],
+    "eth1": {
+        "http": "http://127.0.0.1:8545",
+        "ws": "ws://127.0.0.1:8546"
+    }
+}
+
+# Logging configuration
+log_level = "info"
+log_file = "/path/to/lighthouse/logs/beacon.log"
+
+# Specify the execution layer
+execution_layer = {
+    "type": "eth1",
+    "eth1_data": {
+        "deposit_contract": "0xYourDepositContractAddress",
+        "eth1_genesis": "/path/to/genesis/eth1_genesis.json"
+    }
+}
+
+# Additional configuration options
+validator_dir = "/path/to/lighthouse/validators"
+validator_keys = "/path/to/validators/deposit_data-keys.json"

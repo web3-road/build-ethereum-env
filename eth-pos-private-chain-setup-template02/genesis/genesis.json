@@ -1,0 +1,27 @@
+{
+  "config": {
+    "chainId": 12345,
+    "name": "My Ethereum PoS Private Chain",
+    "consensus": {
+      "type": "PoS",
+      "beaconChain": {
+        "depositContractAddress": "0xYourDepositContractAddressHere"
+      }
+    },
+    "genesisTime": "2023-12-15T00:00:00Z",
+    "initialState": {
+      "validators": [
+        {
+          "pubkey": "0xYourValidatorPublicKeyHere",
+          "withdrawalCredentials": "0xYourWithdrawalCredentialsHere",
+          "effectiveBalance": "32000000000",
+          "slashed": false
+        }
+      ],
+      "balances": {
+        "0xYourValidatorPublicKeyHere": "32000000000"
+      }
+    },
+    "extraData": "0xYourExtraDataHere"
+  }
+}

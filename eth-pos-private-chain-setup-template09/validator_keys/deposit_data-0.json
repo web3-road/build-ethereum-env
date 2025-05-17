@@ -1,0 +1,7 @@
+{
+  "pubkey": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+  "withdrawal_credentials": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "amount": "32000000000",
+  "signature": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+  "index": "0"
+}

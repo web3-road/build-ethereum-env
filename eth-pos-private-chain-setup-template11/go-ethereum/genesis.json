@@ -1,0 +1,30 @@
+{
+  "config": {
+    "chainId": 12345,
+    "homesteadBlock": 0,
+    "eip155Block": 0,
+    "eip158Block": 0,
+    "byzantiumBlock": 0,
+    "constantinopleBlock": 0,
+    "petersburgBlock": 0,
+    "istanbulBlock": 0,
+    "muirGlacierBlock": 0,
+    "berlinBlock": 0,
+    "londonBlock": 0,
+    "arrowGlacierBlock": 0,
+    "mergeForkBlock": 0,
+    "terminalTotalDifficulty": 10000000000000000,
+    "genesisTime": "2023-12-15T00:00:00Z",
+    "initialDifficulty": "0x20000",
+    "gasLimit": "0x2fefd8",
+    "alloc": {}
+  },
+  "difficulty": "0x20000",
+  "gasLimit": "0x2fefd8",
+  "extraData": "0x",
+  "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "nonce": "0x0000000000000000",
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "timestamp": "0x5f9c3c00",
+  "transactions": []
+}

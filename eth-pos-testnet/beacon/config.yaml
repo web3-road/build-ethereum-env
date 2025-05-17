@@ -1,0 +1,33 @@
+network:
+  name: "eth-pos-testnet"
+  chain_id: 12345
+  bootnodes:
+    - "enode://<your_bootnode_enode_here>"
+  deposit_contract_address: "<your_deposit_contract_address_here>"
+  data_dir: "./data"
+  log_level: "info"
+
+validator:
+  enabled: true
+  keys_dir: "../validators/keys"
+  secrets_dir: "../validators/secrets"
+
+consensus:
+  type: "prysm"
+  beacon_rpc: "http://127.0.0.1:4000" 
+  sync_mode: "full"
+  min_peers: 2
+  max_peers: 50
+
+metrics:
+  enabled: true
+  port: 8080
+
+p2p:
+  max_inbound_peers: 25
+  max_outbound_peers: 25
+
+http:
+  enabled: true
+  port: 3500
+  cors: ["*"]

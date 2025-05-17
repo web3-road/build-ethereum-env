@@ -1,0 +1,35 @@
+network:
+  name: "my-private-chain"
+  chain_id: 12345
+  bootnodes: []
+  min_peers: 1
+  max_peers: 25
+
+data_dir: "./data"
+
+beacon:
+  http_port: 4000
+  grpc_port: 5000
+  metrics_port: 8080
+  log_level: "info"
+
+validator:
+  enabled: true
+  password: "your_password_here"
+  keystore_path: "../validators/keys"
+  deposit_data: "../validators/deposit_data.json"
+
+eth1:
+  endpoint: "http://localhost:8545"
+  deposit_contract_address: "0xYourDepositContractAddressHere"
+
+p2p:
+  discovery:
+    bootnodes: []
+  gossip:
+    max_message_size: 1048576
+    max_peers: 25
+
+logging:
+  level: "info"
+  file: "prysm.log"

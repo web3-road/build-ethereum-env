@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# This script is used to handle deposits for the Ethereum PoS private chain setup using Prysm's deposit CLI.
+
+set -e
+
+# Check if the required tools are installed
+if ! command -v prysm-deposit &> /dev/null
+then
+    echo "prysm-deposit could not be found. Please install Prysm first."
+    exit 1
+fi
+
+# Define variables
+DEPOSIT_CONTRACT_ADDRESS="0xYourDepositContractAddress"
+VALIDATOR_KEYS_DIR="./validator_keys"
+DEPOSIT_DATA_FILE="./deposit_data.json"
+
+# Function to create validator keys
+create_validator_keys() {
+    echo "Creating validator keys..."
+    prysm-deposit generate --count 1 --keys-dir $VALIDATOR_KEYS_DIR
+}
+
+# Function to deposit validator keys
+deposit_validator_keys() {
+    echo "Depositing validator keys..."
+    prysm-deposit deposit --keys-dir $VALIDATOR_KEYS_DIR --deposit-contract $DEPOSIT_CONTRACT_ADDRESS --deposit-data-file $DEPOSIT_DATA_FILE
+}
+
+# Main script execution
+create_validator_keys
+deposit_validator_keys
+
+echo "Deposit process completed successfully."

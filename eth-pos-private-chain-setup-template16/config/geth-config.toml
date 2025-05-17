@@ -1,0 +1,33 @@
+# Geth Configuration for Ethereum PoS Private Chain
+
+[Ethash]
+# The algorithm used for mining
+algorithm = "ethash"
+
+[Node]
+# The data directory for Geth
+datadir = "D:/geth/private_chain"
+
+[RPC]
+# Enable the RPC server
+enable = true
+# The address to listen on for RPC requests
+address = "127.0.0.1"
+# The port for RPC requests
+port = 8545
+# Enable CORS for the RPC server
+cors = ["*"]
+
+[Network]
+# The network ID for the private chain
+network_id = 12345
+
+[Mining]
+# Enable mining
+mine = true
+# The gas limit for blocks
+gas_limit = 8000000
+
+[Consensus]
+# The consensus mechanism to use
+type = "eth2"

@@ -1,0 +1,32 @@
+version: "1.0"
+
+name: "Testnet Specification"
+
+chain:
+  name: "Ethereum PoS Testnet"
+  id: 12345
+  genesis_time: "2023-12-15T00:00:00Z"
+  slots_per_epoch: 32
+  seconds_per_slot: 12
+  epochs_per_eth1_vote: 32
+  min_deposit_amount: 32000000000  # 32 ETH in Gwei
+  max_validators_per_epoch: 2048
+
+validator:
+  min_effective_balance: 32000000000  # 32 ETH in Gwei
+  max_effective_balance: 100000000000  # 100 ETH in Gwei
+  activation_exit_delay: 256
+
+network:
+  bootnodes:
+    - "enr:-JQ4QW5vY2F0aW9uY2U6Qm9vdG5vZGU6MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkw"
+  gossip_port: 9000
+  discovery_port: 9001
+
+eth1:
+  endpoint: "http://localhost:8545"
+  deposit_contract_address: "0x0000000000000000000000000000000000000000"  # Replace with actual address
+
+logging:
+  level: "info"
+  file: "lighthouse.log"

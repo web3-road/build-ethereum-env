@@ -1,0 +1,28 @@
+{
+  "config": {
+    "chainId": 12345,
+    "homesteadBlock": 0,
+    "eip155Block": 0,
+    "eip158Block": 0,
+    "byzantiumBlock": 0,
+    "constantinopleBlock": 0,
+    "petersburgBlock": 0,
+    "istanbulBlock": 0,
+    "muirGlacierBlock": 0,
+    "berlinBlock": 0,
+    "londonBlock": 0,
+    "arrowGlacierBlock": 0,
+    "mergeForkBlock": 0,
+    "terminalTotalDifficulty": 10000000000000000,
+    "genesis": {
+      "seal": {
+        "type": "none"
+      },
+      "difficulty": "0x1",
+      "gasLimit": "0x2fefd8",
+      "timestamp": "0x5e8e3c5c",
+      "extraData": "0x",
+      "alloc": {}
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "genesis_version": "1.0",
+  "chain_id": 12345,
+  "timestamp": "2023-12-15T00:00:00Z",
+  "initial_validators": [
+    {
+      "validator_index": 0,
+      "public_key": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+      "withdrawal_credentials": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "effective_balance": 32000000000,
+      "slashed": false
+    }
+  ],
+  "deposit_contract_address": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+  "initial_state_root": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+  "initial_balance": 1000000000000000000,
+  "max_validators": 100,
+  "min_deposit_amount": 32000000000,
+  "network_name": "Ethereum PoS Private Chain"
+}

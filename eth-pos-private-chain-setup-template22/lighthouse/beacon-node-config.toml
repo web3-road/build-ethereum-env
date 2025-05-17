@@ -1,0 +1,28 @@
+# Contents of /eth-pos-private-chain-setup/eth-pos-private-chain-setup/lighthouse/beacon-node-config.toml
+
+network = "mainnet"
+data_dir = "./data"
+port = 5052
+grpc_port = 5054
+http_port = 5051
+bootstrap_nodes = ["enr:-J4Q..."]  # Replace with actual ENR of bootstrap nodes
+log_level = "info"
+eth1 = "http://localhost:8545"
+eth1_follow_distance = 0
+execution_layer = "http://localhost:8551"
+validator_api = "http://localhost:5052"
+metrics = true
+metrics_port = 5054
+enable_http = true
+enable_grpc = true
+enable_metrics = true
+enable_p2p = true
+p2p_port = 9000
+p2p_bootstrap_nodes = ["enr:-J4Q..."]  # Replace with actual ENR of bootstrap nodes
+p2p_max_peers = 50
+p2p_peer_discovery = true
+p2p_discovery_port = 9000
+p2p_max_inbound_connections = 25
+p2p_max_outbound_connections = 25
+p2p_connection_timeout = "10s"
+p2p_keepalive_interval = "30s"

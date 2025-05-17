@@ -1,0 +1,24 @@
+beacon_chain:
+  data_dir: "./data"
+  chain_id: 1
+  min_peers: 2
+  max_peers: 50
+  bootstrap_nodes:
+    - "enr:-JQ4QW5vY2F0aW9uY2U6QmFzZTY0U2V0dGhlcmVhbG1vZGU6MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkw"
+  eth1:
+    endpoint: "http://localhost:8545"
+    deposit_contract_address: "0xYourDepositContractAddress"
+  validator:
+    keys_dir: "./validator-keys"
+    password: "your_password_here"
+  logging:
+    level: "info"
+    file: "./logs/beacon-chain.log"
+  metrics:
+    enabled: true
+    port: 5054
+  rest_api:
+    enabled: true
+    port: 5052
+  sync:
+    mode: "fast"

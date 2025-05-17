@@ -1,0 +1,15 @@
+{
+  "genesis_version": "1.0",
+  "genesis_time": "2023-12-15T00:00:00Z",
+  "genesis_fork_version": "0x00000000",
+  "genesis_state_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "genesis_validator_registry": [],
+  "genesis_eth1_data": {
+    "deposit_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "deposit_count": 0,
+    "block_hash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "genesis_initial_balance": "0x0",
+  "genesis_chain_id": 1,
+  "genesis_network_id": 1
+}

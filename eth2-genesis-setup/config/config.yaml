@@ -1,0 +1,6 @@
+deposit_contract_address: "0xYourDepositContractAddress"
+network: "your_network_name"
+validator_keys_directory: "../validator_keys"
+genesis_file: "../config/genesis.json"
+output_directory: "../output"
+log_level: "info"

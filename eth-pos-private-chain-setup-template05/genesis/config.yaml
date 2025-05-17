@@ -1,0 +1,30 @@
+network:
+  name: "Ethereum PoS Private Chain"
+  chain_id: 12345
+  genesis_time: "2023-12-15T00:00:00Z"
+  terminal_total_difficulty: "0x0"
+  merge_fork_block: 0
+
+beacon_chain:
+  deposit_contract_address: "0xYourDepositContractAddress"
+  validator_keys_path: "../validator_keys"
+
+lighthouse:
+  beacon_node:
+    data_dir: "../lighthouse/beacon-node"
+    port: 5052
+  validator_client:
+    data_dir: "../lighthouse/validator-client"
+    port: 5053
+
+prysm:
+  beacon_chain:
+    data_dir: "../prysm/beacon-chain"
+    port: 4000
+  validator:
+    data_dir: "../prysm/validator"
+    port: 4001
+
+deposit_contract:
+  address: "0xYourDepositContractAddress"
+  abi: "YourDepositContractABI"

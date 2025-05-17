@@ -1,0 +1,35 @@
+[validator-config.toml]
+# Lighthouse Validator Configuration
+
+# The path to the directory where the validator keys are stored
+validator_dir = "./validator_keys"
+
+# The path to the directory where the validator logs will be stored
+log_dir = "./validator_logs"
+
+# The network to connect to
+network = "mainnet"
+
+# The Ethereum 2.0 deposit contract address
+deposit_contract_address = "0x0000000000000000000000000000000000000000"
+
+# The minimum balance required for a validator
+min_balance = 32000000000
+
+# The validator's public key
+validator_public_key = "your_validator_public_key_here"
+
+# The validator's private key
+validator_private_key = "your_validator_private_key_here"
+
+# The port for the validator to listen on
+port = 5050
+
+# The host for the validator to listen on
+host = "0.0.0.0"
+
+# Enable or disable the validator
+enabled = true
+
+# The log level for the validator
+log_level = "info"

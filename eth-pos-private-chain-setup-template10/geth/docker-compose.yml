@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  geth:
+    image: ethereum/client-go:latest
+    container_name: geth
+    ports:
+      - "8545:8545"
+      - "30303:30303"
+    volumes:
+      - ./geth:/root/.ethereum
+      - ./genesis/geth-genesis.json:/genesis.json
+    command: >
+      --config /genesis.json
+      --syncmode "full"
+      --rpc
+      --rpcaddr "0.0.0.0"
+      --rpcapi "eth,net,web3,personal,miner"
+      --allow-insecure-unlock
+      --mine
+      --miner.threads=1
+      --networkid 12345
+      --nodiscover
+      --verbosity 3
+      --gcmode "archive"

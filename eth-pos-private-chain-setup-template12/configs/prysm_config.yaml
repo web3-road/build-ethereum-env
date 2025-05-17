@@ -1,0 +1,25 @@
+network:
+  # The network name for the Prysm client
+  name: "eth-pos-private-chain"
+
+beacon_rpc:
+  # The address of the beacon node's RPC endpoint
+  address: "http://localhost:4000"
+
+validator:
+  # The path to the validator's keystore file
+  keystore_path: "../validator-keys/keystore-XXX.json"
+  # The password for the keystore file
+  password: "your_keystore_password"
+
+# Additional configuration options
+logging:
+  level: "info"
+  file: "prysm.log"
+
+# Optional: specify the number of validators to run
+validators:
+  count: 1
+
+# Optional: specify the data directory for the Prysm client
+data_dir: "../prysm-tools/data"

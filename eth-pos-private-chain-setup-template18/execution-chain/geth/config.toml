@@ -1,0 +1,34 @@
+# This file contains the configuration settings for the Geth client.
+
+[Eth]
+NetworkId = 12345
+SyncMode = "full"
+GasPrice = "20000000000"  # 20 Gwei
+Port = 30303
+RPCPort = 8545
+WSPort = 8546
+DataDir = "D:/geth/private_chain"
+LogFile = "geth.log"
+LogLevel = "info"
+
+[Node]
+IPCPath = "geth.ipc"
+HTTPHost = "127.0.0.1"
+HTTPPort = 8545
+HTTPTimeout = "10s"
+HTTPModules = ["eth", "net", "web3", "personal", "admin"]
+
+[Mining]
+Enabled = true
+GasLimit = "8000000"
+MinerThreads = 1
+Etherbase = "0xYourMinerAddressHere"
+
+[Metrics]
+Enabled = true
+Host = "127.0.0.1"
+Port = 6060
+
+[Snapshot]
+Enabled = true
+Cache = 2048

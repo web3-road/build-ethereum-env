@@ -1,0 +1,23 @@
+network:
+  name: "Ethereum PoS Private Chain"
+  chain_id: 12345
+  boot_nodes:
+    - "enr:-J4Q...your_bootnode_enr_here"
+  eth1:
+    endpoint: "http://127.0.0.1:8545"
+  data_dir: "./lighthouse/data"
+  log_level: "info"
+
+validator:
+  enabled: true
+  keystore_path: "../genesis/validators/keystore.json"
+  password: "your_keystore_password"
+
+beacon:
+  port: 5052
+  metrics_port: 5054
+  http_port: 5051
+
+logging:
+  file: "./lighthouse/logs/lighthouse.log"
+  level: "info"

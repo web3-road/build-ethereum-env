@@ -1,0 +1,32 @@
+validator:
+  # The validator's public key
+  public_key: "YOUR_VALIDATOR_PUBLIC_KEY"
+
+  # The validator's private key file path
+  private_key_file: "/path/to/your/private_key_file.json"
+
+  # The Ethereum 1.0 node endpoint
+  eth1:
+    # The URL of the Ethereum 1.0 node
+    endpoint: "http://127.0.0.1:8545"
+
+  # The beacon chain endpoint
+  beacon:
+    # The URL of the beacon chain
+    endpoint: "http://127.0.0.1:4000"
+
+  # The validator's performance settings
+  performance:
+    # The number of slots to skip before proposing
+    skip_slots: 0
+
+    # The maximum number of concurrent attestations
+    max_concurrent_attestations: 10
+
+  # Optional: additional settings
+  additional_settings:
+    # Enable or disable the validator
+    enabled: true
+
+    # Log level for the validator
+    log_level: "info"

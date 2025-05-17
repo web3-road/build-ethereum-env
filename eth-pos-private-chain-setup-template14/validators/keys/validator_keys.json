@@ -1,0 +1,16 @@
+{
+  "validator_keys": [
+    {
+      "name": "validator1",
+      "mnemonic": "example mnemonic phrase for validator 1",
+      "private_key": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+      "public_key": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef"
+    },
+    {
+      "name": "validator2",
+      "mnemonic": "example mnemonic phrase for validator 2",
+      "private_key": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+      "public_key": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+validator:
+  # The path to the validator's keystore file
+  keystore-path: "/path/to/validator/keys"
+
+  # The password for the keystore file
+  password: "your_password_here"
+
+  # The performance settings for the validator
+  performance:
+    # The number of slots to validate in parallel
+    slots-per-epoch: 32
+
+    # The maximum number of concurrent validators
+    max-concurrent-validators: 16
+
+  # Network settings
+  network:
+    # The address of the beacon node
+    beacon-node: "http://localhost:5052"
+
+    # The port for the validator to listen on
+    port: 5050
+
+  # Logging settings
+  logging:
+    # The log level (e.g., info, debug, warn, error)
+    level: "info"
+
+    # The log file path
+    file: "/path/to/logs/validator.log"

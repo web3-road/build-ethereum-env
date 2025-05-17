@@ -1,0 +1,37 @@
+network:
+  name: "custom-network"
+  chain_id: 12345
+  bootnodes:
+    - "enr:-Jw4QK1...your_bootnode_enr_here"
+  min_peers: 2
+  max_peers: 25
+
+beacon_chain:
+  data_dir: "/path/to/beacon_chain_data"
+  http_port: 4000
+  grpc_port: 5000
+  metrics_port: 8080
+
+validator:
+  data_dir: "/path/to/validator_data"
+  http_port: 4001
+  grpc_port: 5001
+  metrics_port: 8081
+  keystore_path: "/path/to/keystores"
+  password_file: "/path/to/password_file"
+
+logging:
+  level: "info"
+  file: "/path/to/logs/prysm.log"
+
+eth1:
+  endpoint: "http://127.0.0.1:8545"
+  deposit_contract_address: "0xYourDepositContractAddressHere"
+
+pruning:
+  enabled: true
+  interval: 1000
+
+validator_keys:
+  - "/path/to/validator1/keystore"
+  - "/path/to/validator2/keystore"

@@ -1,0 +1,29 @@
+beacon_chain:
+  data_dir: "/path/to/prysm/data"
+  http_port: 3500
+  grpc_port: 50051
+  p2p_port: 9000
+  min_peers: 5
+  max_peers: 50
+  bootstrap_nodes:
+    - "enr:-J4Q...your_bootstrap_node_enr_here"
+  
+validator:
+  data_dir: "/path/to/validator/data"
+  http_port: 4000
+  grpc_port: 50052
+  min_balance: 32000000000 # 32 ETH in wei
+  max_balance: 64000000000 # 64 ETH in wei
+  validator_keys:
+    - "/path/to/validator_keys/keystore-0.json"
+  
+logging:
+  level: "info"
+  file: "/path/to/logs/prysm.log"
+  
+network:
+  eth1:
+    endpoint: "http://localhost:8545"
+    chain_id: 1
+  beacon:
+    endpoint: "http://localhost:4000"

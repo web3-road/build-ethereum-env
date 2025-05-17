@@ -1,0 +1,25 @@
+{
+  "genesis_version": "1.0",
+  "genesis_time": "2023-12-15T00:00:00Z",
+  "chain_id": 12345,
+  "fork": {
+    "epoch": 0,
+    "genesis_validators_root": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "validators": [
+    {
+      "pubkey": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+      "withdrawal_credentials": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "effective_balance": "32000000000",
+      "slashed": false,
+      "activation_eligibility_epoch": 0,
+      "activation_epoch": 0,
+      "exit_epoch": "inf",
+      "withdrawable_epoch": "inf"
+    }
+  ],
+  "balances": {
+    "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef": "32000000000"
+  },
+  "state_root": "0x0000000000000000000000000000000000000000000000000000000000000000"
+}

@@ -1,0 +1,16 @@
+Deposit Contract for Lighthouse
+
+This file contains information about the deposit contract used in the Lighthouse client for the Ethereum Proof of Stake (PoS) private chain setup.
+
+1. **Contract Address**: [Insert the deployed contract address here]
+2. **Contract ABI**: [Insert the ABI of the deposit contract here]
+3. **Deployment Instructions**: 
+   - Use Hardhat or Remix to deploy the contract.
+   - Ensure the contract is deployed on the correct network.
+4. **Usage**: 
+   - This contract is used to handle deposits for validators in the Ethereum PoS network.
+   - Make sure to interact with this contract using the correct methods as defined in the ABI.
+
+5. **Notes**: 
+   - Ensure that the contract is funded appropriately to allow for validator deposits.
+   - Monitor the contract for any events related to deposits and withdrawals.

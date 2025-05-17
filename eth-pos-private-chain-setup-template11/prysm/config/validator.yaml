@@ -1,0 +1,31 @@
+validator:
+  # The validator's private key file
+  priv_validator_file: "/path/to/validator/key/file"
+
+  # The address of the beacon chain
+  beacon_rpc_address: "http://localhost:4000"
+
+  # The address of the validator's HTTP API
+  http_address: "0.0.0.0:7500"
+
+  # The address of the validator's gRPC API
+  grpc_address: "0.0.0.0:5000"
+
+  # The path to the validator's data directory
+  data_dir: "/path/to/validator/data"
+
+  # Performance settings
+  performance:
+    # Maximum number of concurrent requests
+    max_concurrent_requests: 100
+
+    # Timeout for requests in seconds
+    request_timeout: 5
+
+  # Logging settings
+  logging:
+    # Log level (debug, info, warn, error)
+    level: "info"
+
+    # Log file path
+    file: "/path/to/validator/logs/validator.log"

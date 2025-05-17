@@ -1,0 +1,14 @@
+version: "1.0"
+chain_id: 1
+genesis_time: "2023-12-15T00:00:00Z"
+initial_state_root: "0x0000000000000000000000000000000000000000000000000000000000000000"
+validators:
+  - public_key: "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
+    withdrawal_credentials: "0x0000000000000000000000000000000000000000"
+    effective_balance: 32000000000
+    slashed: false
+    activation_eligibility_epoch: 0
+    activation_epoch: 0
+    exit_epoch: 0
+    withdrawable_epoch: 0
+    status: "active"

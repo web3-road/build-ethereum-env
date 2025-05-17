@@ -1,0 +1,20 @@
+beacon:
+  prysm:
+    beacon_rpc: "http://localhost:4000"
+    grpc_port: 50000
+    http_port: 3500
+    data_dir: "./data"
+    log_level: "info"
+    min_sync_peers: 1
+    max_sync_peers: 10
+    metrics_enabled: true
+    metrics_port: 8080
+    deposit_contract_address: "0x0000000000000000000000000000000000000000"  # Replace with actual address after deployment
+    chain_id: 1  # Mainnet chain ID, change as needed for testnet or private chain
+    eth1_rpc: "http://localhost:8545"
+    sync_mode: "full"
+    bootstrap_nodes:
+      - "enr:-JQ...your_bootstrap_node_enr_here"  # Replace with actual ENR of bootstrap nodes
+    validator_keys:
+      - "./genesis/validator_keys/keystore-*.json"  # Path to validator keys
+    # Additional configuration options can be added as needed

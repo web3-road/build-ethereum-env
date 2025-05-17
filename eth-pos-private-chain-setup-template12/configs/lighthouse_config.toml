@@ -1,0 +1,29 @@
+network = "mainnet"
+
+[beacon]
+data_dir = "/path/to/lighthouse/data"
+port = 5052
+http_port = 5053
+bootstrap_nodes = ["enr:-JwQ..."]  # Replace with actual bootstrap nodes
+
+[validator]
+data_dir = "/path/to/lighthouse/validator"
+enable = true
+validator_keys = ["/path/to/validator-keys/keystore-XXX.json"]
+deposit_data = "/path/to/validator-keys/deposit_data-XXX.json"
+
+[logging]
+level = "info"
+file = "/path/to/lighthouse/logs/lighthouse.log"
+
+[metrics]
+enabled = true
+port = 5054
+
+[eth1]
+endpoint = "http://127.0.0.1:8545"
+timeout = 30
+
+[slashing_protection]
+enabled = true
+database_url = "sqlite:///path/to/lighthouse/slashing_protection.db"

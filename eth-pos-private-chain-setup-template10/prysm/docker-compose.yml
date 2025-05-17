@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  beacon-chain:
+    image: gcr.io/prysmaticlabs/prysm/beacon-chain:latest
+    command: ["beacon-chain", "--config-file=/config/beacon-chain-config.yaml"]
+    volumes:
+      - ./beacon-chain-config.yaml:/config/beacon-chain-config.yaml
+      - ./scripts:/scripts
+    ports:
+      - "4000:4000"
+      - "13000:13000"
+      - "12000:12000"
+
+  validator:
+    image: gcr.io/prysmaticlabs/prysm/validator:latest
+    command: ["validator", "--config-file=/config/validator-config.yaml"]
+    volumes:
+      - ./validator-config.yaml:/config/validator-config.yaml
+      - ./scripts:/scripts
+    ports:
+      - "7500:7500"

@@ -1,0 +1,29 @@
+{
+  "genesisVersion": "1.0",
+  "chainId": 12345,
+  "timestamp": "2023-12-15T00:00:00Z",
+  "fork": {
+    "epoch": 0,
+    "genesisValidatorsRoot": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "initialState": {
+    "validatorRegistry": [],
+    "balances": {},
+    "randaoMixes": [],
+    "historicalRoots": [],
+    "eth1Data": {
+      "depositRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "depositCount": 0,
+      "blockHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "params": {
+    "minGenesisActiveValidatorCount": 1,
+    "minGenesisTime": "2023-12-15T00:00:00Z",
+    "maxEffectiveBalance": 32000000000,
+    "minEffectiveBalance": 1000000000,
+    "targetEpoch": 16,
+    "targetCommitteeSize": 128,
+    "maxValidatorsPerCommittee": 2048
+  }
+}

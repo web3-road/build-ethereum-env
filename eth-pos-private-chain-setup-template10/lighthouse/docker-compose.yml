@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  lighthouse-beacon:
+    image: sigp/lighthouse:latest
+    command: lighthouse bn --network mainnet --http --http-port 5052 --datadir /data
+    volumes:
+      - ./data:/data
+    ports:
+      - "5052:5052"
+    restart: unless-stopped
+
+  lighthouse-validator:
+    image: sigp/lighthouse:latest
+    command: lighthouse vc --network mainnet --datadir /data
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
+
+networks:
+  default:
+    driver: bridge

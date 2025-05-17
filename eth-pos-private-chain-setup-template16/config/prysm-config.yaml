@@ -1,0 +1,26 @@
+beacon_chain:
+  data_dir: "/path/to/beacon/data"
+  http_port: 4000
+  grpc_port: 5000
+  min_peers: 5
+  max_peers: 50
+  log_level: "info"
+
+validator:
+  data_dir: "/path/to/validator/data"
+  http_port: 4001
+  grpc_port: 5001
+  min_peers: 5
+  max_peers: 50
+  log_level: "info"
+  password: "your_password_here"
+
+network:
+  bootnodes:
+    - "enr:-your_bootnode_enr_here"
+  chain_id: 1
+  eth1_endpoint: "http://localhost:8545"
+
+deposit:
+  contract_address: "0xYourDepositContractAddressHere"
+  validator_keys: "/path/to/validator/keys"

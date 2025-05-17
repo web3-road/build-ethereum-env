@@ -1,0 +1,30 @@
+# This file contains the configuration settings for the Lighthouse client.
+
+# Lighthouse configuration
+network = "mainnet"
+datadir = "./lighthouse/data"
+log_level = "info"
+
+# Beacon node settings
+beacon = { 
+    port = 5052 
+}
+
+# Validator settings
+validators = { 
+    port = 5050 
+}
+
+# Eth1 settings
+eth1 = { 
+    endpoint = "http://localhost:8545" 
+}
+
+# Other settings
+metrics = { 
+    enabled = true, 
+    port = 5054 
+}
+
+# Optional: specify the path to the validator keys
+validator_keys_path = "./validator_keys"

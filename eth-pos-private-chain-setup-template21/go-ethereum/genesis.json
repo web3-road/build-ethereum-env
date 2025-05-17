@@ -1,0 +1,42 @@
+{
+  "config": {
+    "chainId": 12345,
+    "homesteadBlock": 0,
+    "eip150Block": 0,
+    "eip155Block": 0,
+    "eip158Block": 0,
+    "byzantiumBlock": 0,
+    "constantinopleBlock": 0,
+    "petersburgBlock": 0,
+    "istanbulBlock": 0,
+    "muirGlacierBlock": 0,
+    "berlinBlock": 0,
+    "londonBlock": 0,
+    "arrowGlacierBlock": 0,
+    "mergeForkBlock": 0,
+    "terminalTotalDifficulty": 1,
+    "difficulty": "20000000000000",
+    "gasLimit": "8000000",
+    "maxGasLimit": "8000000",
+    "minGasLimit": "50000"
+  },
+  "difficulty": "20000000000000",
+  "gasLimit": "8000000",
+  "alloc": {
+    "0xYourDepositContractAddress": {
+      "balance": "1000000000000000000000000"
+    }
+  },
+  "extraData": "0x",
+  "genesis": {
+    "timestamp": "0x00",
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "coinbase": "0x0000000000000000000000000000000000000000",
+    "stateRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "transactionsRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "receiptsRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "logsBloom": "0x",
+    "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "nonce": "0x0000000000000000"
+  }
+}

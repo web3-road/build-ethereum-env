@@ -1,0 +1,22 @@
+deposit_contract_address: "0xYourDepositContractAddressHere"
+chain_id: 12345
+network: "private"
+data_dir: "./data"
+log_level: "info"
+validator:
+  keys:
+    - "validator-keys/keystore-0.json"
+  deposit_data:
+    - "validator-keys/deposit_data-0.json"
+beacon_chain:
+  min_peers: 1
+  max_peers: 25
+  sync_mode: "full"
+  bootstrap_nodes: []
+  persistence:
+    enabled: true
+    path: "./data/persistence"
+  metrics:
+    enabled: true
+    address: "0.0.0.0:8080"
+    path: "/metrics"

@@ -1,0 +1,25 @@
+{
+  "genesis_version": "1.0",
+  "chain_id": "12345",
+  "genesis_time": "2023-12-15T00:00:00Z",
+  "initial_state": {
+    "validator_registry": [],
+    "balances": {},
+    "block_roots": [],
+    "state_roots": [],
+    "historical_roots": [],
+    "eth1_data": {
+      "deposit_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "deposit_count": 0,
+      "block_hash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "boot_nodes": [
+    "/ip4/127.0.0.1/tcp/9000/p2p/your_bootnode_id"
+  ],
+  "network": {
+    "name": "eth-pos-private-chain",
+    "version": "1.0"
+  },
+  "extra_data": "0x"
+}

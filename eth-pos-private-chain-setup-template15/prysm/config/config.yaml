@@ -1,0 +1,41 @@
+beacon_chain:
+  chain_id: 1
+  min_genesis_time: 1609459200
+  min_genesis_active_validator_count: 100
+  min_genesis_delay: 600
+  max_committees_per_slot: 64
+  max_validators_per_committee: 256
+  target_committee_size: 128
+  target_epoch_length: 32
+  target_slot_duration: 12
+  max_effective_balance: 32000000000
+  genesis_fork_version: "0x00000000"
+  
+validator:
+  enable: true
+  validator_keys_path: "/path/to/validator/keys"
+  voting_power: 1
+  withdrawal_credentials: "0x0000000000000000000000000000000000000000"
+
+logging:
+  level: "info"
+  file: "prysm.log"
+
+rpc:
+  enabled: true
+  address: "0.0.0.0"
+  port: 4000
+
+http:
+  enabled: true
+  address: "0.0.0.0"
+  port: 3500
+
+p2p:
+  enabled: true
+  bootstrap_nodes: []
+  max_peers: 50
+
+network:
+  name: "eth2"
+  dns: "eth2.example.com"

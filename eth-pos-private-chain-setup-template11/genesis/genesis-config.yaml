@@ -1,0 +1,13 @@
+initial_balance: "1000000000000000000"  # 1 ETH
+chain_id: 12345
+genesis_time: "2023-12-15T00:00:00Z"
+initial_validators:
+  - pubkey: "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
+    withdrawal_credentials: "0x0000000000000000000000000000000000000000"
+    effective_balance: "1000000000000000000"  # 1 ETH
+    slashed: false
+    activation_epoch: 0
+    exit_epoch: "max"
+    withdrawable_epoch: "max"
+    balance: "1000000000000000000"  # 1 ETH
+```

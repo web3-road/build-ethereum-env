@@ -1,0 +1,19 @@
+network:
+  name: "eth-pos-private-chain"
+  boot_nodes: []
+  eth1:
+    endpoint: "http://127.0.0.1:8545"
+  eth2:
+    endpoint: "http://127.0.0.1:5052"
+    
+validator:
+  data_dir: "./validator_data"
+  log_level: "info"
+  
+beacon:
+  data_dir: "./beacon_data"
+  log_level: "info"
+  
+metrics:
+  enabled: true
+  endpoint: "http://127.0.0.1:5054"

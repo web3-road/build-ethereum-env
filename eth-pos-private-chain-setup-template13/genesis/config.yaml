@@ -1,0 +1,28 @@
+network:
+  name: "Ethereum PoS Private Chain"
+  chain_id: 12345
+  genesis_time: "2023-12-15T00:00:00Z"
+  deposit_contract_address: "0xYourDepositContractAddressHere"
+  validator_count: 16
+  min_deposit_amount: 32000000000  # 32 ETH in wei
+  max_epoch_length: 32
+  max_slot_count: 12
+  initial_balance: 100000000000000000000  # 100 ETH in wei
+
+beacon_chain:
+  prysm:
+    beacon_rpc: "http://localhost:4000"
+    validator_rpc: "http://localhost:4001"
+  lighthouse:
+    beacon_rpc: "http://localhost:5052"
+    validator_rpc: "http://localhost:5053"
+
+logging:
+  level: "info"
+  file: "logs/eth-pos-private-chain.log"
+
+metrics:
+  enabled: true
+  port: 8080
+
+# Additional configuration options can be added as needed.

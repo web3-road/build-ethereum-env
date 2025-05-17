@@ -1,0 +1,28 @@
+network:
+  name: "eth-pos-private-chain"
+  chain_id: 12345
+  boot_nodes:
+    - "enr:-J4Q...your_bootnode_enr_here"
+  
+lighthouse:
+  data_dir: "/path/to/lighthouse/data"
+  log_level: "info"
+  metrics:
+    enabled: true
+    port: 5054
+
+validator:
+  data_dir: "/path/to/validator/data"
+  log_level: "info"
+  validator_keys:
+    - "/path/to/validator/key1.json"
+    - "/path/to/validator/key2.json"
+
+beacon:
+  port: 5052
+  eth1:
+    endpoint: "http://127.0.0.1:8545"
+  
+genesis:
+  state: "/path/to/genesis.ssz"
+  deposit_contract: "0xYourDepositContractAddressHere"

@@ -1,0 +1,20 @@
+network:
+  name: "Ethereum PoS Private Chain"
+  chain_id: 12345
+  genesis_time: "2023-12-15T00:00:00Z"
+  deposit_contract_address: "0xYourDepositContractAddress"
+  validator_count: 100
+  initial_balance: 32
+  bootnodes:
+    - "enode://your_bootnode_enode_here@your_bootnode_ip:port"
+  eth1:
+    endpoint: "http://localhost:8545"
+  beacon_chain:
+    endpoint: "http://localhost:4000"
+  lighthouse:
+    endpoint: "http://localhost:5052"
+  prysm:
+    endpoint: "http://localhost:3500"
+  logging:
+    level: "info"
+    file: "logs/genesis.log"

@@ -1,0 +1,16 @@
+[validator-config]
+enable = true
+validator_dir = "/path/to/validator/directory"
+beacon_rpc = "http://localhost:5052"
+data_dir = "/path/to/data/directory"
+log_level = "info"
+metrics_enabled = true
+metrics_address = "0.0.0.0:5054"
+network = "mainnet"
+validator_keys = [
+    "/path/to/validator/keys/validator1.json",
+    "/path/to/validator/keys/validator2.json"
+]
+eth1_rpc = "http://localhost:8545"
+eth1_chain_id = 1
+eth1_deposit_contract_address = "0x0000000000000000000000000000000000000000"

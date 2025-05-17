@@ -1,0 +1,23 @@
+network:
+  name: "Ethereum PoS Private Chain"
+  chain_id: 12345
+  genesis_file: "../genesis/genesis.json"
+
+beacon_chain:
+  prysm:
+    beacon_chain_bin: "../prysm/beacon-chain"
+    validator_bin: "../prysm/validator"
+  lighthouse:
+    lighthouse_bin: "../lighthouse/lighthouse"
+
+deposit_contract:
+  address: "0xYourDepositContractAddress"
+  deployment_script: "../deposit-contract/deploy.js"
+
+validators:
+  mnemonic_file: "../config/mnemonic.txt"
+  keystore_directory: "../validators/keys"
+
+scripts:
+  setup_script: "../scripts/setup.sh"
+  start_script: "../scripts/start.sh"

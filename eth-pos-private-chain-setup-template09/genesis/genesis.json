@@ -1,0 +1,35 @@
+{
+  "genesis_version": "1.0",
+  "chain_id": "12345",
+  "timestamp": "2023-12-15T00:00:00Z",
+  "fork": {
+    "genesis_epoch": 0,
+    "genesis_slot": 0,
+    "genesis_fork_version": "0x00000000"
+  },
+  "validator_registry": {
+    "validators": [
+      {
+        "pubkey": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+        "withdrawal_credentials": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "effective_balance": "32000000000",
+        "slashed": false,
+        "activation_eligibility_epoch": 0,
+        "activation_epoch": 0,
+        "exit_epoch": "max",
+        "withdrawable_epoch": "max"
+      }
+    ]
+  },
+  "initial_state": {
+    "eth1_data": {
+      "deposit_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "deposit_count": 0
+    },
+    "eth1_chain_id": "1",
+    "eth1_block_hash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "boot_nodes": [
+    "/ip4/127.0.0.1/tcp/9000/p2p/12D3KooWJ8g8g8g8g8g8g8g8g8g8g8g8g8g8g8g8g8g8g8g8g8"
+  ]
+}

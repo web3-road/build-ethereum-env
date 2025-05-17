@@ -1,0 +1,33 @@
+network:
+  name: "eth-pos-private-chain"
+  chain_id: 12345
+  bootnodes:
+    - "enr:-Jw4QH8gZ...@127.0.0.1:9000"
+  min_peers: 1
+  max_peers: 25
+
+logging:
+  level: "info"
+  file: "prysm.log"
+  json: false
+
+beacon_chain:
+  data_dir: "./beacon_chain_data"
+  http_port: 4000
+  grpc_port: 5000
+  metrics_port: 8080
+
+validator:
+  data_dir: "./validator_data"
+  http_port: 4001
+  grpc_port: 5001
+  metrics_port: 8081
+
+eth1:
+  endpoint: "http://127.0.0.1:8545"
+  deposit_contract_address: "0x0000000000000000000000000000000000000000"  # Replace with actual address
+
+security:
+  enable_ssl: false
+  ssl_cert: ""
+  ssl_key: ""

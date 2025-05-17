@@ -1,0 +1,25 @@
+{
+  "genesisVersion": "1.0",
+  "genesisTime": "2023-12-15T00:00:00Z",
+  "chainId": 1,
+  "depositContract": {
+    "address": "0xYourDepositContractAddressHere"
+  },
+  "initialState": {
+    "validators": [
+      {
+        "pubkey": "0xYourValidatorPublicKeyHere",
+        "withdrawalCredentials": "0xYourWithdrawalCredentialsHere",
+        "effectiveBalance": "32000000000",
+        "slashed": false,
+        "activationEligibilityEpoch": 0,
+        "activationEpoch": 0,
+        "exitEpoch": "max",
+        "withdrawableEpoch": "max"
+      }
+    ],
+    "balances": {
+      "0xYourValidatorPublicKeyHere": "32000000000"
+    }
+  }
+}

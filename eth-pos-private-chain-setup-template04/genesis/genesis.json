@@ -1,0 +1,28 @@
+{
+  "config": {
+    "chainId": 12345,
+    "genesisTime": "2023-12-15T00:00:00Z",
+    "initialValidatorCount": 2,
+    "depositContractAddress": "0xYourDepositContractAddress",
+    "networkName": "EthPoSPrivateChain",
+    "genesisValidatorsRoot": "0xYourGenesisValidatorsRoot",
+    "genesisState": {
+      "validatorBalances": {
+        "0xValidator1Address": "1000000000000000000",
+        "0xValidator2Address": "1000000000000000000"
+      },
+      "validatorRegistry": [
+        {
+          "pubkey": "0xYourValidator1Pubkey",
+          "withdrawalCredentials": "0xYourWithdrawalCredentials1",
+          "effectiveBalance": "1000000000000000000"
+        },
+        {
+          "pubkey": "0xYourValidator2Pubkey",
+          "withdrawalCredentials": "0xYourWithdrawalCredentials2",
+          "effectiveBalance": "1000000000000000000"
+        }
+      ]
+    }
+  }
+}

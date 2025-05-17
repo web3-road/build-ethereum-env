@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  prysm-beacon:
+    image: gcr.io/prysmaticlabs/prysm/beacon-chain:latest
+    volumes:
+      - ./prysm/config/beacon-chain.yaml:/config/beacon-chain.yaml
+      - ./genesis:/genesis
+    command: ["beacon-chain", "--config=/config/beacon-chain.yaml", "--genesis-file=/genesis/genesis.json"]
+    ports:
+      - "4000:4000"
+      - "13000:13000"
+
+  prysm-validator:
+    image: gcr.io/prysmaticlabs/prysm/validator:latest
+    volumes:
+      - ./prysm/config/validator.yaml:/config/validator.yaml
+      - ./genesis/validator_keys:/validator_keys
+    command: ["validator", "--config=/config/validator.yaml"]
+    ports:
+      - "7500:7500"
+
+  lighthouse-beacon:
+    image: sigp/lighthouse:latest
+    volumes:
+      - ./lighthouse/config/beacon-node.yaml:/config/beacon-node.yaml
+      - ./genesis:/genesis
+    command: ["beacon_node", "--config=/config/beacon-node.yaml", "--genesis-file=/genesis/genesis.json"]
+    ports:
+      - "5052:5052"
+
+  lighthouse-validator:
+    image: sigp/lighthouse:latest
+    volumes:
+      - ./lighthouse/config/validator.yaml:/config/validator.yaml
+      - ./genesis/validator_keys:/validator_keys
+    command: ["validator", "--config=/config/validator.yaml"]
+    ports:
+      - "5054:5054"
+
+  geth:
+    image: ethereum/client-go:latest
+    volumes:
+      - ./go-ethereum/genesis.json:/genesis.json
+    command: ["--config", "/genesis.json"]
+    ports:
+      - "8545:8545"
+      - "30303:30303"

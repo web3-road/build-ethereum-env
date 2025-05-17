@@ -1,0 +1,22 @@
+network:
+  name: "my-private-chain"
+  bootnodes: []
+  port: 9000
+  data_dir: "/path/to/lighthouse/data"
+  
+beacon:
+  http:
+    address: "127.0.0.1"
+    port: 5052
+  metrics:
+    address: "127.0.0.1"
+    port: 5054
+
+validator:
+  enabled: true
+  data_dir: "/path/to/lighthouse/validator"
+  keystore_password: "your_keystore_password"
+  
+logging:
+  level: "info"
+  file: "/path/to/lighthouse/logs/lighthouse.log"

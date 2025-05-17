@@ -1,0 +1,21 @@
+beacon_chain:
+  data_dir: "/path/to/prysm/data"
+  http_port: 3500
+  grpc_port: 5000
+  p2p_port: 9000
+  min_peers: 5
+  max_peers: 50
+  log_level: "info"
+  beacon_rpc:
+    enabled: true
+    port: 4000
+  metrics:
+    enabled: true
+    port: 8080
+  deposit_contract_address: "0xYourDepositContractAddress"
+  chain_id: 1
+  eth1:
+    endpoint: "http://127.0.0.1:8545"
+  validator:
+    keys:
+      - "/path/to/validator/keys"

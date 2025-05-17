@@ -1,0 +1,33 @@
+network:
+  name: "Ethereum PoS Private Chain"
+  chain_id: 12345
+  genesis_block: "0x0000000000000000000000000000000000000000000000000000000000000000"
+  bootnodes:
+    - "enode://<your_bootnode_enode>@<your_bootnode_ip>:<your_bootnode_port>"
+  
+validator:
+  min_balance: 32000000000  # Minimum balance for a validator in wei
+  max_validators: 100  # Maximum number of validators allowed
+
+logging:
+  level: "info"
+  file: "logs/prysm.log"
+
+rpc:
+  enabled: true
+  host: "0.0.0.0"
+  port: 4000
+
+metrics:
+  enabled: true
+  host: "0.0.0.0"
+  port: 8080
+
+eth2:
+  deposit_contract_address: "0x0000000000000000000000000000000000000000"  # Replace with actual address
+  deposit_contract_chain_id: 1  # Mainnet chain ID
+
+security:
+  enable_ssl: false
+  ssl_cert_file: ""
+  ssl_key_file: ""

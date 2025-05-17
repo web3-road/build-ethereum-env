@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  prysm-beacon-node:
+    image: gcr.io/prysmaticlabs/prysm/beacon-chain:latest
+    command: ["beacon-chain", "--config-file=/config/config.yaml"]
+    volumes:
+      - ./prysm/config:/config
+      - ./genesis:/genesis
+      - ./validator_keys:/validator_keys
+    ports:
+      - "4000:4000"
+      - "3500:3500"
+
+  prysm-validator:
+    image: gcr.io/prysmaticlabs/prysm/validator:latest
+    command: ["validator", "--config-file=/config/config.yaml"]
+    volumes:
+      - ./prysm/config:/config
+      - ./validator_keys:/validator_keys
+    ports:
+      - "7500:7500"
+
+  lighthouse-beacon-node:
+    image: sigp/lighthouse:latest
+    command: ["beacon_node", "--config=/config/config.toml"]
+    volumes:
+      - ./lighthouse/config:/config
+      - ./genesis:/genesis
+      - ./validator_keys:/validator_keys
+    ports:
+      - "5052:5052"
+
+  lighthouse-validator:
+    image: sigp/lighthouse:latest
+    command: ["validator", "--config=/config/config.toml"]
+    volumes:
+      - ./lighthouse/config:/config
+      - ./validator_keys:/validator_keys
+    ports:
+      - "5054:5054"

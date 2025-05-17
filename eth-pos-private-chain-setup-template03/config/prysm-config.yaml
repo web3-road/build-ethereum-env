@@ -1,0 +1,30 @@
+network:
+  name: "my-private-eth-pos-network"
+  bootstrap_nodes: []
+  data_dir: "/path/to/prysm/data"
+  log_level: "info"
+
+beacon_chain:
+  http_port: 4000
+  grpc_port: 5000
+  metrics_port: 8080
+  min_peers: 5
+  max_peers: 50
+
+validator:
+  http_port: 4001
+  grpc_port: 5001
+  metrics_port: 8081
+  min_peers: 5
+  max_peers: 50
+  validator_keys:
+    - "/path/to/validator/key1.json"
+    - "/path/to/validator/key2.json"
+
+logging:
+  level: "info"
+  file: "/path/to/logs/prysm.log"
+
+eth1:
+  http_url: "http://127.0.0.1:8545"
+  deposit_contract_address: "0xYourDepositContractAddress"

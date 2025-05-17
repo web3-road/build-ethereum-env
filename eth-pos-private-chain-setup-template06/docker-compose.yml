@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  geth:
+    image: ethereum/client-go:latest
+    container_name: geth
+    volumes:
+      - ./geth:/root/.ethereum
+    ports:
+      - "8545:8545"
+      - "30303:30303"
+    command: ["sh", "-c", "./geth.sh"]
+
+  prysm_beacon_chain:
+    image: gcr.io/prysmaticlabs/prysm/beacon-chain:latest
+    container_name: prysm_beacon_chain
+    volumes:
+      - ./prysm:/data
+    ports:
+      - "4000:4000"
+    command: ["sh", "-c", "./scripts/start.sh"]
+
+  prysm_validator:
+    image: gcr.io/prysmaticlabs/prysm/validator:latest
+    container_name: prysm_validator
+    volumes:
+      - ./prysm:/data
+    ports:
+      - "7500:7500"
+    command: ["sh", "-c", "./scripts/start.sh"]
+
+  lighthouse_beacon_chain:
+    image: gcr.io/prysmaticlabs/lighthouse:latest
+    container_name: lighthouse_beacon_chain
+    volumes:
+      - ./lighthouse:/data
+    ports:
+      - "5052:5052"
+    command: ["sh", "-c", "./scripts/start.sh"]
+
+  lighthouse_validator:
+    image: gcr.io/prysmaticlabs/lighthouse:latest
+    container_name: lighthouse_validator
+    volumes:
+      - ./lighthouse:/data
+    ports:
+      - "5053:5053"
+    command: ["sh", "-c", "./scripts/start.sh"]
